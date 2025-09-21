@@ -82,7 +82,7 @@ a:hover::after {
 
 main {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
   gap: 20px;
   width: 100%;
   max-width: 1200px;
@@ -112,6 +112,8 @@ main {
   object-fit: contain;
   display: block;
 }
+
+
 
 .dark-btn{
     background-color: #000000;
