@@ -7,7 +7,7 @@ body {
 
 .container {
   width: 1200px;
-  margin: 0 auto; 
+  margin: 0 auto;
 }
 
 .header__nav {
@@ -72,7 +72,7 @@ a:hover::after {
   display: block;
   transform: scale(1.5);
 }
-.sefl  {
+.sefl {
   height: 100%;
   max-height: 60px;
   width: auto;
@@ -113,12 +113,10 @@ main {
   display: block;
 }
 
-
-
-.dark-btn{
-    background-color: #000000;
-    color:#ffffff
-} 
+.dark-btn {
+  background-color: #000000;
+  color: #ffffff;
+}
 /* code button dark light mode */
 body {
   margin: 0;
@@ -232,9 +230,8 @@ a::after {
   transition: width 0.3s ease;
 }
 
-
 body.dark a::after {
-  background-color: rgb(255, 255, 255); 
+  background-color: rgb(255, 255, 255);
 }
 
 /* reponsive */
@@ -253,7 +250,7 @@ main {
     padding: 0 10px;
   }
   .card-1 {
-    width: 45%; 
+    width: 45%;
   }
 }
 
@@ -273,6 +270,11 @@ main {
   }
 
   .card-1 {
-    width: 90%; /* full gần hết màn hình */
+    width: 90%; 
   }
+}
+.logo {
+  width: clamp(80px, 15vw, 150px); /* tự co dãn theo màn hình */
+  height: auto;
+  object-fit: contain;
 }
