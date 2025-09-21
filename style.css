@@ -274,7 +274,18 @@ main {
   }
 }
 .logo {
-  width: clamp(80px, 15vw, 150px); /* tự co dãn theo màn hình */
+  width: clamp(80px, 15vw, 150px); 
   height: auto;
   object-fit: contain;
+}
+nav a {
+  font-size: 18px; 
+  padding: 10px 15px;
+}
+
+@media (max-width: 768px) {
+  nav a {
+    font-size: 14px; 
+    padding: 8px 10px;
+  }
 }
