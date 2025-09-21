@@ -18,3 +18,7 @@ toggleBtn.addEventListener("click", () => {
     localStorage.setItem("theme", "light");
   }
 });
+function toggleMenu() {
+  const menu = document.getElementById("menu");
+  menu.hidden = !menu.hidden;
+}
