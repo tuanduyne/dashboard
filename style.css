@@ -254,7 +254,6 @@ main {
 /* Mobile */
 @media (max-width: 600px) {
   .header__nav {
-    flex-direction: column;
     height: auto;
     padding: 10px;
   }
