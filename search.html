@@ -1,54 +1,100 @@
 <!DOCTYPE html>
-<html lang="Vi">
-  <head>
-    <link rel="stylesheet" href="style.css" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Search For Evt</title>
-  </head>
-  <body>
-    <div class="container">
-        <header class="header">
-        <div class="header__nav">
-          <div class="logo">
-            <a href="#"><img src="./img/large.png" alt="Logo" /></a>
-          </div>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search For Evt</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <iframe src="header.html" frameborder="0" scrolling="no" style="width:100%;height:80px;"></iframe>
+    <header class="header">
+      <!-- Nút toggle -->
+      <div class="menu-btn" id="menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
 
-          <!-- Nav links -->
-          <ul class="nav-links" id="menu" hidden>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Search</a></li>
-            <li><a href="#">Entertainment</a></li>
-            <li><a href="#">Connect</a></li>
-          </ul>
-
-          <!-- Menu icon -->
-          <img src="./img/menu.png"alt="Menu"class="menu-icon" onclick="toggleMenu()">
+      <!-- Sidebar -->
+      <div class="sidebar" id="sidebar">
+        <div class="close-btn" id="close-btn">
+          <i class="fas fa-times"></i>
         </div>
-      </header>
+        <ul class="menu">
+          <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+          <li><a href="search.html"><i class="fas fa-user"></i> Search</a></li>
+          <li><a href="ai.html"><i class="fas fa-briefcase"></i> AI</a></li>
+          <li><a href="#"><i class="fas fa-envelope"></i> Relax&Contact</a></li>
+        </ul>
+      </div>
+    </header>
+  </div>
+
+  <main>
+    <section>
+      <a href="https://www.google.com/?locale=vi_VN" target="_blank">
+        <div class="card-1">
+          <img src="./img/google.png" alt="Google Logo" class="img1" />
+          <p>Google</p>
+        </div>
+      </a>
+    </section>
+    <section>
+      <a href="https://www.bing.com" target="_blank">
+        <div class="card-1">
+          <img src="./img/bing.png" alt="Bing Logo" class="img1" />
+          <p>Bing</p>
+        </div>
+      </a>
+    </section>
+    <section>
+      <a href="https://www.baidu.com" target="_blank">
+        <div class="card-1">
+          <img src="./img/baidu.png" alt="Baidu Logo" class="img1" />
+          <p>Baidu</p>
+        </div>
+      </a>
+    </section>
+    <section>
+      <a href="https://search.yahoo.com" target="_blank">
+        <div class="card-1">
+          <img src="./img/yahoo.png" alt="Yahoo Logo" class="img1" />
+          <p>Yahoo</p>
+        </div>
+      </a>
+    </section>
+    <section>
+      <a href="https://duckduckgo.com" target="_blank">
+        <div class="card-1">
+          <img src="./img/web.png" alt="DuckDuckGo Logo" class="img1" />
+          <p>DuckDuckGo</p>
+        </div>
+      </a>
+    </section>
+    <section>
+      <a href="https://yandex.com" target="_blank">
+        <div class="card-1">
+          <img src="./img/yandex.png" alt="yandex Logo" class="img1" />
+          <p>Yandex</p>
+        </div>
+      </a>
+    </section>
+
+
+
+
+
+
+
+
+
+  </main>
+      <div>
+      <div class="button_toggle">
+        <button>Change color</button>
+      </div>
     </div>
-       <main>
-        <section>
-          <a href="https://chatgpt.com/" target="_blank">
-            <div class="card-1">
-              <img src="./img/chatgpt.png" alt="ChatGpt Logo" class="img1" />
-              <p>Chat GPT</p>
-            </div>
-          </a>
-        </section>
-         <section>
-        <a href="https://www.google.com/?locale=vi_VN" target="_blank">
-          <div class="card-1">
-            <img src="./img/google.png" alt="Google Logo" class="img1" />
-            <p>Google</p>
-          </div>
-        </a>
-      </section>
-
-
-
-
-      </main>
-      <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
 </html>

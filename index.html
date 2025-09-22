@@ -5,26 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TDuy Dashboard & Everyone</title>
     <link rel="stylesheet" href="style.css" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   </head>
   <body>
     <div class="container">
       <header class="header">
-        <div class="header__nav">
-          <div class="logo">
-            <a href="#"><img src="./img/large.png" alt="Logo" /></a>
-          </div>
+          <!-- Nút toggle -->
+  <div class="menu-btn" id="menu-btn">
+    <i class="fas fa-bars"></i>
+  </div>
 
-          <!-- Nav links -->
-          <ul class="nav-links" id="menu" hidden>
-            <li><a href="#">Home</a></li>
-            <li><a href="search.html">Search</a></li>
-            <li><a href="#">Entertainment</a></li>
-            <li><a href="#">Connect</a></li>
-          </ul>
-
-          <!-- Menu icon -->
-          <img src="./img/menu.png"alt="Menu"class="menu-icon" onclick="toggleMenu()">
-        </div>
+  <!-- Sidebar -->
+  <div class="sidebar" id="sidebar">
+    <div class="close-btn" id="close-btn">
+      <i class="fas fa-times"></i>
+    </div>
+    <ul class="menu">
+      <li><a href="#"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="search.html"><i class="fas fa-user"></i> Search</a></li>
+      <li><a href="ai.html"><i class="fas fa-briefcase"></i> AI</a></li>
+      <li><a href="#"><i class="fas fa-envelope"></i> Relax&Contact</a></li>
+    </ul>
+  </div>
       </header>
     </div>
 
@@ -154,7 +156,7 @@
         </a>
       </section>
     </main>
-
+<!-- change color -->
     <div>
       <div class="button_toggle">
         <button>Change color</button>
