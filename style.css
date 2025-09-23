@@ -2,7 +2,7 @@ body {
   margin: 0;
   height: 2000px;
   background-color: #f8f8e1da;
-  font-family: Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body.dark .logo img {
@@ -18,7 +18,10 @@ body.dark .logo img {
   color: black;
   transition: color 0.3s ease;
 }
-
+p{
+  font-weight:700;
+  font-size: large;
+}
 body.dark .menu-btn i {
   color: rgb(0, 0, 0);
 }
@@ -213,7 +216,9 @@ a::after {
 a:hover::after {
   width: 100%;
 }
-
+.icon{
+  font-size: 30px;
+}
 .logo img {
   height: 100%;
   max-height: 60px;
@@ -228,7 +233,10 @@ a:hover::after {
   display: block;
   transform: scale(1.5);
 }
+img{
+  width: 100px;
 
+}
 main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
@@ -249,6 +257,7 @@ main {
   justify-content: center;
   border-radius: 8px;
   transition: transform 0.2s ease;
+  gap: 20px;
 }
 
 .card-1:hover {
@@ -308,12 +317,9 @@ a {
   transition: color 0.3s ease;
 }
 
-/* a:hover {
-  color: #ffffff;
-} */
 
 body.dark a {
-  color: #90caf9;
+  color: #ffffff;
 }
 body.dark a:hover {
   color: #fff;
@@ -329,6 +335,7 @@ body.dark a:hover {
   align-items: center;
   justify-content: center;
   transition: 0.3s;
+  gap: 20px;
 }
 
 .card-1 img {
@@ -437,4 +444,12 @@ nav a {
     font-size: 14px; 
     padding: 8px 10px;
   }
+}
+/* Dark mode */
+body.dark .menu li a {
+  color: #000000; /* đỏ khi dark mode */
+}
+
+body.dark .menu li a:hover {
+  color: #64b5f6; /* xanh nhạt khi hover */
 }
