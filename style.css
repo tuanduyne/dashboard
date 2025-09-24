@@ -429,11 +429,11 @@ img {
   height: 60px;
 }
 
-main{
+.main-contact{
  margin: 0;
-  height: 100vh; /* chiếm toàn màn hình */
+  height: 100vh; 
   display: flex;
-  align-items: center;   /* căn giữa theo trục dọc */
+  align-items: center;  
   justify-content: center; 
   
 }
