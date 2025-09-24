@@ -7,10 +7,11 @@
 
 /* Body */
 body {
+  margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #f8f8e1da;
   color: #000;
-  min-height: 100vh;
+  height: 100vh;
 }
 
 body.dark {
@@ -21,8 +22,8 @@ body.dark {
 /* Container */
 .container {
   width: 1200px;
-  max-width: 100%;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 /* Logo */
@@ -31,14 +32,25 @@ body.dark {
   height: auto;
   object-fit: contain;
 }
+
 .logo img {
+  height: 100%;
   max-height: 60px;
+  width: auto;
+  display: block;
+  transform: scale(1.5);
+}
+
+.sefl {
+  height: 100%;
+  max-height: 60px;
+  width: auto;
   display: block;
   transform: scale(1.5);
 }
 
 /* Header */
-.header__nav {
+.header__nav, .header {
   display: flex;
   align-items: center;
   justify-content: space-between; 
@@ -52,6 +64,7 @@ body.dark {
   z-index: 999;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+
 body.dark .header__nav {
   background-color: #2a2a2a;
 }
@@ -65,13 +78,15 @@ body.dark .header__nav {
   cursor: pointer;
   z-index: 1001;
 }
+
 .menu-btn i {
   font-size: 24px;
   color: black;
   transition: color 0.3s ease;
 }
+
 body.dark .menu-btn i {
-  color: #fff;
+  color: #000;
 }
 
 /* Sidebar */
@@ -86,9 +101,12 @@ body.dark .menu-btn i {
   transition: 0.3s;
   z-index: 1000;
 }
+
 .sidebar.active {
   left: 0;
 }
+
+/* Nút đóng sidebar */
 .close-btn {
   position: absolute;
   top: 20px;
@@ -97,12 +115,15 @@ body.dark .menu-btn i {
   cursor: pointer;
   color: #fff;
 }
+
 .menu {
   list-style: none;
 }
+
 .menu li {
   margin: 20px 0;
 }
+
 .menu li a {
   color: #fff;
   text-decoration: none;
@@ -112,17 +133,21 @@ body.dark .menu-btn i {
   padding: 10px 20px;
   transition: background 0.3s;
 }
+
 .menu li a i {
   margin-right: 15px;
   font-size: 20px;
 }
+
 .menu li a:hover {
   background: #333;
   border-radius: 5px;
 }
+
 body.dark .menu li a {
   color: #000;
 }
+
 body.dark .menu li a:hover {
   color: #64b5f6;
 }
@@ -139,26 +164,34 @@ body.dark .menu li a:hover {
   min-width: 150px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
   list-style: none;
+  margin: 0;
   z-index: 1000;
 }
+
 #menu li {
   padding: 8px 12px;
   cursor: pointer;
+  transition: background 0.2s;
 }
+
 #menu li:hover {
   background-color: #f0f0f0;
 }
+
 #menu a {
   text-decoration: none;
   color: #000;
 }
+
 body.dark #menu {
   background-color: #333;
   border: 1px solid #666;
 }
+
 body.dark #menu li:hover {
   background-color: #555;
 }
+
 body.dark #menu a {
   color: #fff;
 }
@@ -173,9 +206,11 @@ a {
   padding: 5px 0;
   transition: color 0.3s ease;
 }
+
 a:hover {
   color: #000;
 }
+
 a::after {
   content: "";
   position: absolute;
@@ -186,12 +221,19 @@ a::after {
   background-color: #000;
   transition: width 0.3s ease;
 }
+
 a:hover::after {
   width: 100%;
 }
+
 body.dark a {
   color: #fff;
 }
+
+body.dark a:hover {
+  color: #fff;
+}
+
 body.dark a::after {
   background-color: #fff;
 }
@@ -201,10 +243,12 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
   gap: 20px;
+  width: 100%;
   max-width: 1200px;
-  margin: 120px auto 0;
+  margin: 120px auto 0 auto;
   padding: 20px;
 }
+
 .card-1 {
   height: 150px;
   background-color: #f8f8e1da;
@@ -217,15 +261,18 @@ main {
   box-shadow: 10px 10px 18px rgba(0, 0, 0, 0.3);
   transition: transform 0.2s ease;
 }
+
 .card-1:hover {
   transform: scale(1.05);
 }
+
 .card-1 img {
   max-width: 80%;
   max-height: 80%;
   object-fit: contain;
   display: block;
 }
+
 body.dark .card-1 {
   background-color: #2c2c2c;
   border: 1px solid #444;
@@ -236,6 +283,7 @@ body.dark .card-1 {
   text-align: center;
   margin: 30px 0;
 }
+
 .button_toggle button {
   padding: 10px 20px;
   font-size: 16px;
@@ -246,24 +294,193 @@ body.dark .card-1 {
   color: #fff;
   transition: 0.3s;
 }
+
 .button_toggle button:hover {
   opacity: 0.8;
 }
+
 body.dark .button_toggle button {
   background-color: #333;
   color: #fff;
 }
 
-/* --- Contact Section --- */
+/* Responsive */
+/* Tablet */
+@media (max-width: 900px) {
+  .container {
+    width: 100%;
+    padding: 0 10px;
+  }
+  main {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .header__nav {
+    height: auto;
+    padding: 10px;
+  }
+  main {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    align-items: center;
+  }
+}
+
+/* Nav text responsive */
+nav a {
+  font-size: 18px; 
+  padding: 10px 15px;
+}
+
+@media (max-width: 768px) {
+  nav a {
+    font-size: 14px; 
+    padding: 8px 10px;
+  }
+}
+
+/* Extra */
+.icon {
+  font-size: 30px;
+}
+
+p {
+  font-weight: 700;
+  font-size: large;
+}
+
+img {
+  width: 100px;
+}
+/* code contact */
+.container__main {
+  width: 100%;              
+  height: 60vh;
+  background-color: #f6f6f6;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  margin-left: 40px;
+}
+.main-left {
+  width: 200px;
+  height: 100%;
+  background-color: #d78080;
+
+}
+.p-left{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 50%;
+}
+.p-left h2{
+  font-weight: 900;
+  font-size: xx-large;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.container-mid {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);    
+  place-items: center;
+  gap: 40px;
+}
+
+/* Đường ngang */
+.container-mid::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  right: 20%;
+  height: 3px;
+  background-color: #999;
+  z-index: 0;
+}
+
+/* Đường dọc */
+.container-mid::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  bottom: 20%;
+  width: 3px;
+  background-color: #999;
+  z-index: 0;
+}
+
+/* Icon nổi trên đường */
+.container-mid section {
+  position: relative;
+  z-index: 1;
+}
+
+.container-mid img {
+  width: 60px;
+  height: 60px;
+}
+
+.main-contact{
+ margin: 0;
+  height: 100vh; 
+  display: flex;
+  align-items: center;  
+  justify-content: center; 
+  
+}
+.qrcode{
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  align-items: center;   
+  justify-content: center;
+  object-fit: fill;
+}
+@media (max-width: 600px) {
+  .container-mid {
+    grid-template-columns: 1fr;  /* 1 cột */
+    grid-template-rows: repeat(4, auto);
+    gap: 30px;
+  }
+
+  /* Xóa đường ngang khi lên mobile */
+  .container-mid::before {
+    display: none;
+  }
+
+  /* Biến đường dọc thành đường thẳng nối 4 icon */
+  .container-mid::after {
+    content: "";
+    position: absolute;
+    top: 10%;
+    bottom: 10%;
+    left: 50%;
+    width: 3px;
+    background-color: #999;
+    z-index: 0;
+  }
+}
+/* --- Container chính --- */
 .container__main {
   width: 100%;
   height: 60vh;
   background-color: #f6f6f6;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; /* căn giữa cả khối */
   gap: 40px;
 }
+
+/* --- Cột bên trái --- */
 .main-left {
   width: 200px;
   height: 100%;
@@ -272,6 +489,7 @@ body.dark .button_toggle button {
   align-items: center;
   justify-content: center;
 }
+
 .p-left {
   display: flex;
   flex-direction: column;
@@ -283,6 +501,8 @@ body.dark .button_toggle button {
   font-size: xx-large;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+/* --- Phần giữa (icon + line) --- */
 .container-mid {
   flex: 1;
   height: 60vh;
@@ -293,11 +513,15 @@ body.dark .button_toggle button {
   gap: 40px;
   position: relative;
 }
+
+/* Icon chung */
 .container-mid section img {
   width: 60px;
   height: 60px;
   cursor: pointer;
 }
+
+/* Đường thẳng nối icon */
 .container-mid::before {
   content: "";
   position: absolute;
@@ -318,44 +542,26 @@ body.dark .button_toggle button {
   top: 20%;
   z-index: 0;
 }
+
+/* Icon luôn nằm trên line */
 .container-mid section {
   position: relative;
   z-index: 1;
 }
 
-/* --- Responsive --- */
-
-/* Tablet */
-@media (max-width: 900px) {
-  .container {
-    padding: 0 10px;
-  }
-  main {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  }
-}
-
-/* Mobile */
-@media (max-width: 600px) {
-  .header__nav {
-    height: auto;
-    padding: 10px;
-  }
-  main {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    align-items: center;
-  }
-
-  /* Contact section mobile */
+/* --- Responsive cho điện thoại --- */
+@media (max-width: 768px) {
   .container__main {
     flex-direction: column;
     height: auto;
     padding: 20px;
   }
+
   .main-left {
     width: 100%;
     height: auto;
   }
+
   .container-mid {
     width: 100%;
     height: auto;
@@ -363,10 +569,14 @@ body.dark .button_toggle button {
     flex-direction: column;
     gap: 30px;
   }
+
+  /* Xóa line ngang dọc trên mobile */
   .container-mid::before,
   .container-mid::after {
     display: none;
   }
+
+  /* Thêm line dọc nối icon trên mobile */
   .container-mid section:not(:last-child)::after {
     content: "";
     position: absolute;
@@ -377,5 +587,85 @@ body.dark .button_toggle button {
     left: 50%;
     transform: translateX(-50%);
     z-index: -1;
+  }
+}
+/* Bên contact (container-mid) */
+.container-mid {
+  flex: 1;
+  height: 60vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  place-items: center;
+  gap: 40px;
+  position: relative;
+}
+
+/* Icon */
+.container-mid section img {
+  width: 70px;
+  height: 70px;
+  transition: transform 0.3s ease;
+}
+
+.container-mid section img:hover {
+  transform: scale(1.1);
+}
+
+/* Đường nối ngang + dọc */
+.container-mid::before,
+.container-mid::after {
+  content: "";
+  position: absolute;
+  background: #999;
+  z-index: 0;
+}
+
+.container-mid::before {
+  width: 80%;
+  height: 2px;
+  top: 50%;
+  left: 10%;
+}
+
+.container-mid::after {
+  width: 2px;
+  height: 80%;
+  left: 50%;
+  top: 10%;
+}
+
+/* ----- Responsive chỉ bên contact ----- */
+@media (max-width: 768px) {
+  .container-mid {
+    gap: 20px; /* giảm khoảng cách giữa các icon */
+    max-width: 320px; /* thu nhỏ container */
+  }
+
+  .container-mid section img {
+    width: 50px; /* icon nhỏ hơn */
+    height: 50px;
+  }
+
+  .container-mid::before {
+    width: 70%;
+    left: 15%;
+  }
+
+  .container-mid::after {
+    height: 70%;
+    top: 15%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container-mid {
+    max-width: 260px;
+    gap: 15px;
+  }
+
+  .container-mid section img {
+    width: 40px;
+    height: 40px;
   }
 }
