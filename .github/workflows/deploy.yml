@@ -1,25 +1,29 @@
-name: Deploy Website
+name: Deploy static site
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main  # hoặc branch bạn đang deploy
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4   # dùng v4 mới nhất
+      - name: Checkout
+        uses: actions/checkout@v4
 
       - name: Setup Pages
-        uses: actions/configure-pages@v5   # cập nhật v5
+        uses: actions/configure-pages@v5
 
       - name: Upload website files
-        uses: actions/upload-pages-artifact@v3   # cập nhật v3
+        uses: actions/upload-pages-artifact@v3
         with:
           path: ./
 
       - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4   # cập nhật v4
+        uses: actions/deploy-pages@v4
