@@ -2,7 +2,7 @@ name: Deploy Website
 
 on:
   push:
-    branches: [ "main" ]   # Tự động chạy khi push code lên main
+    branches: [ "main" ]
 
 jobs:
   deploy:
@@ -10,16 +10,16 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4   # dùng v4 mới nhất
 
       - name: Setup Pages
-        uses: actions/configure-pages@v3
+        uses: actions/configure-pages@v5   # cập nhật v5
 
       - name: Upload website files
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3   # cập nhật v3
         with:
-          path: ./   # nếu code web ở thư mục gốc; nếu code build ra /dist thì sửa thành dist
+          path: ./
 
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4   # cập nhật v4
