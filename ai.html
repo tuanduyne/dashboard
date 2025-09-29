@@ -1,108 +1,103 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI SUPPORT</title>
-  </head>
-  <body>
-    <div class="container">
-      <iframe
-        src="header.html"
-        frameborder="0"
-        scrolling="no"
-        style="width: 100%; height: 80px"
-      ></iframe>
-      <header class="header">
-        <!-- Nút toggle -->
-        <div class="menu-btn" id="menu-btn">
-          <i class="fas fa-bars"></i>
-        </div>
-
-        <!-- Sidebar -->
-        <div class="sidebar" id="sidebar">
-          <div class="close-btn" id="close-btn">
-            <i class="fas fa-times"></i>
-          </div>
-          <ul class="menu">
-            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-      <li><a href="search.html"><i class="fa-solid fa-magnifying-glass"></i>  Search engine</a></li>
-      <li><a href="ai.html"><i class="fa-solid fa-robot"></i> AI</a></li>
-      <li><a href="contact.html"><i class="fa-regular fa-id-card"></i> Contact</a></li>
-          </ul>
-        </div>
-      </header>
-    </div>
-    <main>
-      <section>
-        <a href="https://chatgpt.com" target="_blank">
-          <div class="card-1">
-            <img src="./img/chatgpt.png" alt="ChatGPT Logo" class="img1" />
-            <p>ChatGPT</p>
-          </div>
-        </a>
-      </section>
-      <section>
-        <a href="https://Gemini.com" target="_blank">
-          <div class="card-1">
-            <img src="./img/icons8-gemini-ai-96.png" alt="Germini Logo" class="img1" />
-            <p>Germini</p>
-          </div>
-        </a>
-      </section>
-      <section>
-        <a href="https://www.anthropic.com" target="_blank">
-          <div class="card-1">
-            <img src="./img/claude.png" alt="Claude Logo" class="img1" />
-            <p>Claude AI</p>
-          </div>
-        </a>
-      </section>
-      <section>
-        <a href="https://Copilot.com" target="_blank">
-          <div class="card-1">
-            <img src="./img/copilot.png" alt="Copilot Logo" class="img1" />
-            <p>Copilot</p>
-          </div>
-        </a>
-      </section>
-      <section>
-        <a href="https://openai.com" target="_blank">
-          <div class="card-1">
-            <img src="./img/openai.png" alt="Open AI Logo" class="img1" />
-            <p>Open AI</p>
-          </div>
-        </a>
-      </section>
-      <section>
-        <a href="mathway.com" target="_blank">
-          <div class="card-1">
-            <img src="./img/match.png" alt="Matchway Logo" class="img1" />
-            <p>Matchway</p>
-          </div>
-        </a>
-      </section>
-      <section>
-        <a href="https://dictionary.cambridge.org/vi/dictionary/english-vietnamese/flat" target="_blank">
-          <div class="card-1">
-            <img src="./img/translation.png" alt="TFlat Logo" class="img1" />
-            <p>TFlat</p>
-          </div>
-        </a>
-      </section>
-    </main>
-     <div>
-      <div class="button_toggle">
-        <button>Change color</button>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Tools</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Header iframe -->
+    <header class="header">
+      <div class="menu-btn" id="menu-btn">
+        <i class="search-icon fas fa-bars fa-5x"></i>
       </div>
+
+      <!-- Search box -->
+      <div class="search-container">
+        <div class="search">
+          <div class="search-icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input 
+              placeholder="Tìm kiếm..." 
+              type="text" 
+              id="search-input"
+              class="search-text"
+            >
+          </div>
+        </div>
+        <ul class="suggestions"></ul>
+      </div>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
+      <div class="close-btn" id="close-btn">
+        <i class="fas fa-times"></i>
+      </div>
+      <ul class="menu">
+        <li>
+          <a href="index.html"><i class="fas fa-home"></i> Home</a>
+        </li>
+        <li>
+          <a href="search.html"><i class="fa-solid fa-magnifying-glass"></i> Search engine</a>
+        </li>
+        <li>
+          <a href="ai.html"><i class="fa-solid fa-robot"></i> AI</a>
+        </li>
+        <li>
+          <a href="contact.html"><i class="fa-regular fa-id-card"></i> Contact</a>
+        </li>
+      </ul>
     </div>
+  </div>
 
+  <!-- Main content -->
+  <main>
+    <section>
+      <a href="https://chatgpt.com/" target="_blank">
+        <div class="card-1">
+          <img src="./img/chatgpt.png" alt="ChatGPT Logo" class="img1" />
+          <p>ChatGPT</p>
+        </div>
+      </a>
+    </section>
 
-    <script src="script.js"></script>
-  </body>
+    <section>
+      <a href="https://gemini.google.com/app?hl=vi" target="_blank">
+        <div class="card-1">
+          <img src="./img/icons8-gemini-ai-96.png" alt="Gemini Logo" class="img1" />
+          <p>Gemini AI</p>
+        </div>
+      </a>
+    </section>
+
+    <section>
+      <a href="https://copilot.microsoft.com/" target="_blank">
+        <div class="card-1">
+          <img src="./img/copilot.png" alt="Copilot Logo" class="img1" />
+          <p>Copilot</p>
+        </div>
+      </a>
+    </section>
+
+    <section>
+      <a href="https://www.anthropic.com/claude" target="_blank">
+        <div class="card-1">
+          <img src="./img/claude.png" alt="Claude Logo" class="img1" />
+          <p>Claude AI</p>
+        </div>
+      </a>
+    </section>
+  </main>
+
+  <!-- Change color -->
+  <div class="button_toggle">
+    <button>Change color</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
