@@ -59,6 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // =====================
   const data = [
     { name: "Facebook", url: "https://www.facebook.com/" },
+    { name: "Messenger", url: "https://www.facebook.com/" },
     { name: "Instagram", url: "https://www.instagram.com/" },
     { name: "YouTube", url: "https://www.youtube.com/" },
     { name: "Google", url: "https://www.google.com/" },
@@ -77,6 +78,8 @@ document.addEventListener("DOMContentLoaded", () => {
     { name: "Yahoo", url: "https://search.yahoo.com/" },
     { name: "DuckDuckGo", url: "https://duckduckgo.com/" },
     { name: "Yandex", url: "https://yandex.com/" },
+    { name: "Cốc cốc", url: "https://coccoc.com/" },
+    { name: "U tê hắc", url: "https://portal.ut.edu.vn/" },
     { name: "Claude AI", url: "https://claude.com/product/overview" },
   ];
 
