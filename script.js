@@ -81,6 +81,8 @@ document.addEventListener("DOMContentLoaded", () => {
     { name: "Cốc cốc", url: "https://coccoc.com/" },
     { name: "U tê hắc", url: "https://portal.ut.edu.vn/" },
     { name: "Claude AI", url: "https://claude.com/product/overview" },
+    { name: "Google Drive", url: "https://workspace.google.com/intl/vi/products/drive/" },
+    { name: "Gmail", url: "https://workspace.google.com/intl/vi/gmail/" },
   ];
 
   if (input && suggestionsBox) {
