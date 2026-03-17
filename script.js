@@ -83,6 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
     { name: "Claude AI", url: "https://claude.com/product/overview" },
     { name: "Google Drive", url: "https://workspace.google.com/intl/vi/products/drive/" },
     { name: "Gmail", url: "https://workspace.google.com/intl/vi/gmail/" },
+    { name: "Spotify", url: "https://open.spotify.com/" },
   ];
 
   if (input && suggestionsBox) {
